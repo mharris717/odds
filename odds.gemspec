@@ -24,7 +24,9 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "VERSION",
     "lib/odds.rb",
+    "odds.gemspec",
     "spec/odds_spec.rb",
     "spec/spec_helper.rb"
   ]

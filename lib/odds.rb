@@ -8,7 +8,7 @@ end
   load File.dirname(__FILE__) + "/odds/#{f}.rb"
 end
 
-%w(kelly).each do |f|
+%w(kelly correlated_kelly).each do |f|
   load File.dirname(__FILE__) + "/odds/algorithms/#{f}.rb"
 end
 

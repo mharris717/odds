@@ -12,7 +12,7 @@ module Odds
     attr_accessor :odds, :wagered_amount, :win_chance
 
     def to_s
-      "#{odds}"
+      "#{odds} #{wagered_amount.round(4)}"
     end
 
     def loss_chance
@@ -20,7 +20,11 @@ module Odds
     end
 
     def odds=(o)
-      o = Odds.from_string(o) if o.kind_of?(String)
+      if o.kind_of?(String)
+        o = Odds.from_string(o) 
+      elsif o.kind_of?(Numeric)
+        o = Odds.new(:win_chance => o)
+      end
       @odds = o
     end
 

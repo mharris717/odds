@@ -66,6 +66,11 @@ module Odds
       Math.log(odds)
     end
 
+    def without_vig(vig)
+      res = win_chance * (1.0-vig)
+      self.class.new(win_chance: res)
+    end
+
     class << self
       def from_string(str)
         sign = str[0..0]

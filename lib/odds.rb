@@ -1,10 +1,10 @@
 require 'mharris_ext'
 
-%w(to_odds string hash map_special numeric rand math).each do |f|
+%w(to_odds string hash map_special numeric rand math object).each do |f|
   load File.dirname(__FILE__) + "/odds/ext/#{f}.rb"
 end
 
-%w(odds bet parlay).each do |f|
+%w(odds bet parlay lines).each do |f|
   load File.dirname(__FILE__) + "/odds/#{f}.rb"
 end
 

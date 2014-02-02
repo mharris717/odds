@@ -11,6 +11,10 @@ module Odds
     include ExpectedProfit
     attr_accessor :odds, :wagered_amount, :win_chance
 
+    def to_s
+      "#{odds}"
+    end
+
     def loss_chance
       1.0 - win_chance
     end
@@ -38,6 +42,12 @@ module Odds
       else
         -wagered_amount
       end
+    end
+
+    def without_vig(vig)
+      res = clone
+      res.odds = odds.without_vig(vig)
+      res
     end
   end
 end

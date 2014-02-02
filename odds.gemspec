@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Harris"]
-  s.date = "2014-02-01"
+  s.date = "2014-02-02"
   s.description = "odds"
   s.email = "mharris717@gmail.com"
   s.extra_rdoc_files = [
@@ -21,13 +21,26 @@ Gem::Specification.new do |s|
     ".rspec",
     "Gemfile",
     "Gemfile.lock",
+    "Guardfile",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
     "lib/odds.rb",
+    "lib/odds/bet.rb",
+    "lib/odds/ext/hash.rb",
+    "lib/odds/ext/map_special.rb",
+    "lib/odds/ext/math.rb",
+    "lib/odds/ext/numeric.rb",
+    "lib/odds/ext/rand.rb",
+    "lib/odds/ext/string.rb",
+    "lib/odds/ext/to_odds.rb",
+    "lib/odds/odds.rb",
+    "lib/odds/parlay.rb",
     "odds.gemspec",
+    "spec/bet_spec.rb",
     "spec/odds_spec.rb",
+    "spec/parlay_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/mharris717/odds"
@@ -45,12 +58,20 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 1.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.7"])
+      s.add_development_dependency(%q<guard>, [">= 0"])
+      s.add_development_dependency(%q<guard-rspec>, [">= 0"])
+      s.add_development_dependency(%q<guard-spork>, [">= 0"])
+      s.add_development_dependency(%q<rb-fsevent>, ["~> 0.9"])
     else
       s.add_dependency(%q<mharris_ext>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 1.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
+      s.add_dependency(%q<guard>, [">= 0"])
+      s.add_dependency(%q<guard-rspec>, [">= 0"])
+      s.add_dependency(%q<guard-spork>, [">= 0"])
+      s.add_dependency(%q<rb-fsevent>, ["~> 0.9"])
     end
   else
     s.add_dependency(%q<mharris_ext>, [">= 0"])
@@ -58,6 +79,10 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 1.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
+    s.add_dependency(%q<guard>, [">= 0"])
+    s.add_dependency(%q<guard-rspec>, [">= 0"])
+    s.add_dependency(%q<guard-spork>, [">= 0"])
+    s.add_dependency(%q<rb-fsevent>, ["~> 0.9"])
   end
 end
 

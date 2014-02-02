@@ -3,13 +3,13 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "Odds" do
   def self.should_have_to_s(win_chance,exp)
     it "to_s #{win_chance} -> #{exp}" do
-      odds = Odds.new(:win_chance => win_chance)
+      odds = Odds::Odds.new(:win_chance => win_chance)
       odds.to_s.should == exp
     end
   end
 
   def odds(win_chance)
-    Odds.new(:win_chance => win_chance)
+    Odds::Odds.new(:win_chance => win_chance)
   end
 
   should_have_to_s 0.25, '+300'
@@ -53,15 +53,15 @@ describe "Odds" do
 
   describe "other creation methods" do
     it 'from string' do
-      Odds.from_string("+300").win_chance.should == 0.25
+      Odds::Odds.from_string("+300").win_chance.should == 0.25
     end
 
     it 'from string' do
-      Odds.from_string("-300").win_chance.should == 0.75
+      Odds::Odds.from_string("-300").win_chance.should == 0.75
     end
 
     it 'from string bad' do
-      lambda { Odds.from_string("42") }.should raise_error
+      lambda { Odds::Odds.from_string("42") }.should raise_error
     end
   end
 

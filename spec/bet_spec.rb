@@ -1,6 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Bet" do
+  Bet = Odds::Bet
   it 'smoke' do
     bet = Bet.new(:odds => "+200", :wagered_amount => 100)
     bet.potential_profit.should == 200

@@ -4,12 +4,12 @@ describe "Parlay" do
   describe 'basic' do
     let(:bets) do
       res = []
-      res << Bet.new(:odds => "+200", :win_chance => 0.4)
-      res << Bet.new(:odds => "+300", :win_chance => 0.3)
+      res << Odds::Bet.new(:odds => "+200", :win_chance => 0.4)
+      res << Odds::Bet.new(:odds => "+300", :win_chance => 0.3)
       res
     end
     let(:parlay) do
-      Parlay.new(:bets => bets, :wagered_amount => 100)
+      Odds::Parlay.new(:bets => bets, :wagered_amount => 100)
     end
 
     it 'odds' do

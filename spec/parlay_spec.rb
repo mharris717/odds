@@ -13,7 +13,7 @@ describe "Parlay" do
     end
 
     it 'odds' do
-      parlay.odds.win_chance.should == (1.0/12.0)
+      parlay.odds.win_chance.round(4).should == (1.0/12.0).round(4)
     end
 
     it 'win_chance' do

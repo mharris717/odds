@@ -3,6 +3,10 @@ module Odds
     include FromHash
     attr_accessor :win_chance
 
+    def win_chance=(w)
+      @win_chance = w
+    end
+
     def initialize(arg)
       if arg.kind_of?(Hash)
         from_hash(arg)
@@ -22,10 +26,10 @@ module Odds
 
     def to_s_to_one
       if win_chance < 0.5
-        "#{win_amount_without_principal} to 1"
+        "#{win_amount_without_principal.to_if} to 1"
       else
         n = (1.0 / win_amount_without_principal).round(1)
-        "1 to #{n}"
+        "1 to #{n.to_if}"
       end
     end
 
@@ -43,6 +47,10 @@ module Odds
 
     def* (other)
       res = win_chance * other.win_chance
+      self.class.new(:win_chance => res)
+    end
+    def +(other)
+      res = win_chance + other.win_chance
       self.class.new(:win_chance => res)
     end
 

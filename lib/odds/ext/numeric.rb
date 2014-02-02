@@ -6,4 +6,12 @@ class Numeric
       abs**e * -1
     end
   end
+
+  def to_if
+    if to_i == to_f
+      to_i
+    else
+      to_f
+    end
+  end
 end

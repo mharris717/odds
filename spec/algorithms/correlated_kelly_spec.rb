@@ -27,4 +27,9 @@ describe "Correlated Kelly" do
     kelly
     bets[1].wagered_amount.round(4).should == 0.0462
   end
+
+  it 'stuff' do
+    a = ('+200'.to_odds + '+300'.to_odds).to_s
+    a.should == '-140'
+  end
 end

@@ -88,6 +88,10 @@ describe "Odds" do
     "+150".to_odds.win_chance.should == 0.4
   end
 
+  it 'converting string to odds and back' do
+    Odds::Odds.from_string("-140").to_s.should == "-140"
+  end
+
   describe "vig" do
     it 'smoke' do
       odds("-150").without_vig(0.2/1.2).win_chance.should == 0.5

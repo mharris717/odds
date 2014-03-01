@@ -20,7 +20,7 @@ module Odds
         "+" + (win_amount_without_principal * 100.0).to_i.to_s
       else
         n = (1.0 / loss_chance) - 1.0
-        "-" + (n * 100.0).to_i.to_s
+        "-" + (n * 100.0).round(4).to_i.to_s
       end
     end
 

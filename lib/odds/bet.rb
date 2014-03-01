@@ -9,7 +9,7 @@ module Odds
 
     include FromHash
     include ExpectedProfit
-    attr_accessor :odds, :wagered_amount, :win_chance
+    attr_accessor :odds, :wagered_amount, :win_chance, :name
 
     def to_s
       "#{odds} #{wagered_amount.round(4)}"

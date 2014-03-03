@@ -82,6 +82,10 @@ describe "Odds" do
       odds("-100").win_chance.should == 0.5
     end
 
+    it 'decimal odds' do
+      Odds::Odds.from_decimal_odds(3).to_s.should == '+200'
+    end
+
   end
 
   it 'to_odds - string' do

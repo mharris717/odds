@@ -86,6 +86,13 @@ module Odds
       def from_win_amount_without_principal(num)
         new(:win_chance => (1.0 / (1.0 + num)))
       end
+      def from_win_amount_with_principal(num)
+        from_win_amount_without_principal(num-1.0)
+      end
+      def from_decimal_odds(num)
+        from_win_amount_with_principal(num)
+      end
+
     end
   end
 end

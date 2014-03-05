@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Harris"]
-  s.date = "2014-02-02"
+  s.date = "2014-03-05"
   s.description = "odds"
   s.email = "mharris717@gmail.com"
   s.extra_rdoc_files = [
@@ -26,22 +26,39 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "input/bets.csv",
+    "input/sims.csv",
     "lib/odds.rb",
+    "lib/odds/algorithms/correlated_kelly.rb",
+    "lib/odds/algorithms/genetic.rb",
+    "lib/odds/algorithms/kelly.rb",
+    "lib/odds/algorithms/parlay_utility.rb",
     "lib/odds/bet.rb",
     "lib/odds/ext/hash.rb",
     "lib/odds/ext/map_special.rb",
     "lib/odds/ext/math.rb",
     "lib/odds/ext/numeric.rb",
+    "lib/odds/ext/object.rb",
     "lib/odds/ext/rand.rb",
     "lib/odds/ext/string.rb",
     "lib/odds/ext/to_odds.rb",
+    "lib/odds/lines.rb",
     "lib/odds/odds.rb",
     "lib/odds/parlay.rb",
+    "lib/odds/special/combination_parlay.rb",
+    "lib/odds/special/load_sims.rb",
     "odds.gemspec",
+    "spec/algorithms/correlated_kelly_spec.rb",
+    "spec/algorithms/kelly_spec.rb",
     "spec/bet_spec.rb",
+    "spec/lines_spec.rb",
     "spec/odds_spec.rb",
     "spec/parlay_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/special/combination_parlay_spec.rb",
+    "vol/kelly_sim.rb",
+    "vol/parlay_utility_test.rb",
+    "vol/parlays_as_horses.rb"
   ]
   s.homepage = "http://github.com/mharris717/odds"
   s.licenses = ["MIT"]

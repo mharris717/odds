@@ -79,6 +79,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<guard-rspec>, [">= 0"])
       s.add_development_dependency(%q<guard-spork>, [">= 0"])
       s.add_development_dependency(%q<rb-fsevent>, ["~> 0.9"])
+      s.add_development_dependency(%q<lre>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
     else
       s.add_dependency(%q<mharris_ext>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.8.0"])
@@ -89,6 +91,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<guard-rspec>, [">= 0"])
       s.add_dependency(%q<guard-spork>, [">= 0"])
       s.add_dependency(%q<rb-fsevent>, ["~> 0.9"])
+      s.add_dependency(%q<lre>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
     end
   else
     s.add_dependency(%q<mharris_ext>, [">= 0"])
@@ -100,6 +104,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<guard-rspec>, [">= 0"])
     s.add_dependency(%q<guard-spork>, [">= 0"])
     s.add_dependency(%q<rb-fsevent>, ["~> 0.9"])
+    s.add_dependency(%q<lre>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
   end
 end
 

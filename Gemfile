@@ -17,6 +17,9 @@ group :development do
   gem 'guard-spork'
 
   gem 'rb-fsevent', '~> 0.9'
+
+  gem 'lre'
+  gem 'rake'
 end
 
 gem 'mharris_ext'

@@ -71,6 +71,10 @@ module Odds
       self.class.new(win_chance: res)
     end
 
+    def ==(x)
+      win_chance == x.win_chance
+    end
+
     class << self
       def from_string(str)
         sign = str[0..0]

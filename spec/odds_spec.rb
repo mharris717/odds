@@ -101,4 +101,14 @@ describe "Odds" do
       odds("-150").without_vig(0.2/1.2).win_chance.should == 0.5
     end
   end
+
+  describe 'equality' do
+    it 'equal' do
+      odds('-150').should == odds('-150')
+    end
+
+    it 'not equal' do
+      odds('-150').should_not == odds('-250')
+    end
+  end
 end

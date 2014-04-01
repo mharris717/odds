@@ -36,6 +36,10 @@ module Odds
     def win_amount_with_principal
       1.0 / win_chance
     end
+    def decimal_odds
+      win_amount_with_principal
+    end
+    
     def win_amount_without_principal
       win_amount_with_principal - 1.0
     end

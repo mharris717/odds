@@ -16,6 +16,9 @@ module Odds
     end
 
     def to_s
+      return "INF" if win_chance == 1.0
+      return "ZER" if win_chance == 0.0
+      
       if win_chance < 0.5
         "+" + (win_amount_without_principal * 100.0).to_i.to_s
       else

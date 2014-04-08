@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Mike Harris"]
-  s.date = "2014-04-01"
+  s.date = "2014-04-08"
   s.description = "odds"
   s.email = "mharris717@gmail.com"
   s.extra_rdoc_files = [
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".lre",
     ".rspec",
     "Gemfile",
     "Gemfile.lock",

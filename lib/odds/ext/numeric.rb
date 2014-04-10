@@ -15,3 +15,9 @@ class Numeric
     end
   end
 end
+
+class Numeric
+  def to_odds
+    Odds::Odds.new(win_chance: self)
+  end
+end

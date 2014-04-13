@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
   s.authors = ["Mike Harris"]
-  s.date = "2014-04-08"
+  s.date = "2014-04-13"
   s.description = "odds"
   s.email = "mharris717@gmail.com"
   s.extra_rdoc_files = [
@@ -59,6 +59,7 @@ Gem::Specification.new do |s|
     "spec/parlay_spec.rb",
     "spec/spec_helper.rb",
     "spec/special/combination_parlay_spec.rb",
+    "tmp/.gitkeep",
     "vol/kelly_sim.rb",
     "vol/parlay_utility_test.rb",
     "vol/parlays_as_horses.rb"

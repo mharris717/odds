@@ -91,7 +91,7 @@ module Odds
         elsif sign == '+'
           from_win_amount_without_principal(num)
         else
-          raise "bad #{str}"
+          raise "from_string bad #{str}"
         end
       end
       def from_win_amount_without_principal(num)

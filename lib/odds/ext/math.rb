@@ -29,3 +29,19 @@ class Hash
     res
   end
 end
+
+class Array
+  def comb_one_from_each
+    return self if self.size == 1
+    raise "empty" if empty?
+
+    res = []
+    self[0].each do |el|
+      rest_res = self[1..-1].comb_one_from_each
+      rest_res.each do |rest_comb|
+        res << [el]+rest_comb
+      end
+    end
+    res
+  end
+end

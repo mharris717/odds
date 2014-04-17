@@ -82,6 +82,14 @@ module Odds
       win_chance == x.win_chance
     end
 
+    def to_vig(vig)
+      odds = [self,inverse]
+      bets = odds.map { |x| Bet.new(win_chance: x.win_chance, odds: x, wagered_amount: 1000) }
+      lines = Lines.new(bets: bets)
+      lines = lines.to_vig(vig)
+      lines.bets.first.odds
+    end
+
     class << self
       def from_string(str)
         sign = str[0..0]
